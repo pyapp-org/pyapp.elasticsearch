@@ -40,4 +40,4 @@ jobs:
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       run: |
-        GIT_BRANCH=$GITHUB_REF GIT_COMMIT_SHA=$GITHUB_SHA ./cc-test-reporter after-build --exit-code $?
+        GIT_BRANCH=$GITHUB_REF GIT_COMMIT_SHA=$GITHUB_SHA ./cc-test-reporter after-build -t coverage.py --exit-code $?
