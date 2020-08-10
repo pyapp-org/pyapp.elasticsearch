@@ -36,6 +36,9 @@ jobs:
       run: |
         poetry run pytest
 
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.12
+
     - name: Report coverage
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
