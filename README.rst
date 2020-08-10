@@ -8,7 +8,7 @@ pyApp - Elastic Search
    :target: http://github.com/ambv/black
    :alt: Once you go Black...
 
-.. image:: https://github.com/pyapp-org/pyapp.elasticsearch/workflows/Python%20package/badge.svg
+.. image:: https://github.com/pyapp-org/pyapp.elasticsearch/workflows/Testcases/badge.svg
    :alt: Tests
 
 .. image:: https://api.codeclimate.com/v1/badges/82a3ab9806df3765daf0/maintainability
