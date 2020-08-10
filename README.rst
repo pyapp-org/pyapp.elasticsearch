@@ -51,8 +51,8 @@ Add the `ELASTICSEARCH` block into your runtime settings file::
 .. note::
 
     In addition to the *host* any argument that can be provided to
-    `elasticsearch.Elasticsearch` or `elasticsearch.AsyncElasticsearch` can be
-    provided.
+    ``elasticsearch.Elasticsearch`` or ``elasticsearch.AsyncElasticsearch`` can
+    be provided.
 
 
 Usage
