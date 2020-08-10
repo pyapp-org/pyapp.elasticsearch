@@ -34,7 +34,9 @@ jobs:
 
     - name: Test with pytest
       run: |
+        ls -la
         poetry run pytest
+        ls -la
 
     - name: Codecov
       uses: codecov/codecov-action@v1.0.12
@@ -44,4 +46,4 @@ jobs:
         CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
       run: |
         ls -la
-        GIT_BRANCH=$GITHUB_REF GIT_COMMIT_SHA=$GITHUB_SHA ./cc-test-reporter after-build -t coverage.py --exit-code $?
+        GIT_BRANCH=$GITHUB_REF GIT_COMMIT_SHA=$GITHUB_SHA ./cc-test-reporter after-build -d -t coverage.py --exit-code $?
