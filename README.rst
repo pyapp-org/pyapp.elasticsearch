@@ -11,11 +11,11 @@ pyApp - Elastic Search
 .. image:: https://github.com/pyapp-org/pyapp.elasticsearch/workflows/Python%20package/badge.svg
    :alt: Tests
 
-.. image:: https://api.codeclimate.com/v1/badges/e25e476cd1cd598e89f4/maintainability
+.. image:: https://api.codeclimate.com/v1/badges/82a3ab9806df3765daf0/maintainability
    :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch/maintainability
    :alt: Maintainability
 
-.. image:: https://api.codeclimate.com/v1/badges/e25e476cd1cd598e89f4/test_coverage
+.. image:: https://api.codeclimate.com/v1/badges/82a3ab9806df3765daf0/test_coverage
    :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch/test_coverage
    :alt: Test Coverage
 
