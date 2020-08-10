@@ -8,15 +8,15 @@ pyApp - Elastic Search
    :target: http://github.com/ambv/black
    :alt: Once you go Black...
 
-.. image:: https://github.com/pyapp-org/pyapp.elasticsearch-py/workflows/Python%20testing/badge.svg
+.. image:: https://github.com/pyapp-org/pyapp.elasticsearch/workflows/Python%20package/badge.svg
    :alt: Tests
 
 .. image:: https://api.codeclimate.com/v1/badges/e25e476cd1cd598e89f4/maintainability
-   :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch-py/maintainability
+   :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch/maintainability
    :alt: Maintainability
 
 .. image:: https://api.codeclimate.com/v1/badges/e25e476cd1cd598e89f4/test_coverage
-   :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch-py/test_coverage
+   :target: https://codeclimate.com/github/pyapp-org/pyapp.elasticsearch/test_coverage
    :alt: Test Coverage
 
 This extension provides a Elasticsearch client object configured via pyApp settings.
