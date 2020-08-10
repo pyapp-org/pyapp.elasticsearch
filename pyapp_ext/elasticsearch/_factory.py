@@ -6,7 +6,7 @@ Elasticsearch Client Factory
 from elasticsearch import Elasticsearch
 try:
     from elasticsearch import AsyncElasticsearch
-except ImportError:
+except ImportError:  # pragma: no cover
     AsyncElasticsearch = None
 
 from pyapp.conf.helpers import NamedFactory
@@ -120,5 +120,5 @@ class AsyncElasticsearchFactory(NamedFactory[AsyncElasticsearch]):
             raise RuntimeError("AsyncElasticsearch is not available, install the `aiohttp` package.")
 
 
-async_factory = AsyncElasticsearch("ELASTICSEARCH")
+async_factory = AsyncElasticsearchFactory("ELASTICSEARCH")
 get_async_client = async_factory.create

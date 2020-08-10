@@ -3,7 +3,7 @@ pyApp Elasticsearch Extension
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 """
-from .factory import *
+from ._factory import *
 
 
 class Extension:
