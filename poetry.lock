@@ -278,13 +278,13 @@ description = "Pytest support for asyncio."
 name = "pytest-asyncio"
 optional = false
 python-versions = ">= 3.5"
-version = "0.12.0"
+version = "0.14.0"
 
 [package.dependencies]
 pytest = ">=5.4.0"
 
 [package.extras]
-testing = ["async_generator (>=1.3)", "coverage", "hypothesis (>=5.7.1)"]
+testing = ["async-generator (>=1.3)", "coverage", "hypothesis (>=5.7.1)"]
 
 [[package]]
 category = "dev"
@@ -372,7 +372,7 @@ testing = ["jaraco.itertools", "func-timeout"]
 async = ["aiohttp"]
 
 [metadata]
-content-hash = "29f909bb0fcce593beb93a4390a868bb016029eb3dfddd8a865e7027738e9892"
+content-hash = "8447e4acc4bfd11182d1943e4b6da74aece334703c632bd9327a60b1025a9c4e"
 python-versions = "^3.6"
 
 [metadata.files]
@@ -521,7 +521,8 @@ pytest = [
     {file = "pytest-6.0.1.tar.gz", hash = "sha256:85228d75db9f45e06e57ef9bf4429267f81ac7c0d742cc9ed63d09886a9fe6f4"},
 ]
 pytest-asyncio = [
-    {file = "pytest-asyncio-0.12.0.tar.gz", hash = "sha256:475bd2f3dc0bc11d2463656b3cbaafdbec5a47b47508ea0b329ee693040eebd2"},
+    {file = "pytest-asyncio-0.14.0.tar.gz", hash = "sha256:9882c0c6b24429449f5f969a5158b528f39bde47dc32e85b9f0403965017e700"},
+    {file = "pytest_asyncio-0.14.0-py3-none-any.whl", hash = "sha256:2eae1e34f6c68fc0a9dc12d4bea190483843ff4708d24277c41568d6b6044f1d"},
 ]
 pytest-cov = [
     {file = "pytest-cov-2.10.0.tar.gz", hash = "sha256:1a629dc9f48e53512fcbfda6b07de490c374b0c83c55ff7a1720b3fccff0ac87"},
