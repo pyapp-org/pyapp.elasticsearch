@@ -31,8 +31,9 @@ jobs:
         run: |
           rm -rf dist
           poetry build
-          echo "::set-output name=source::$(ls dist/*.tar.gz)"
-          echo "::set-output name=wheel::$(ls dist/*.whl)"
+          cd dist
+          echo "::set-output name=source::$(ls *.tar.gz)"
+          echo "::set-output name=wheel::$(ls *.whl)"
       
       - name: Create a Release
         id: create_release
@@ -51,7 +52,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./dist/${{ steps.build_package.outputs.wheel }}
-          asset_name: ${{ steps.build_package.wheel }}
+          asset_name: ${{ steps.build_package.outputs.wheel }}
           asset_content_type: application/x-pywheel+zip
 
       - name: Upload Release Source
@@ -61,5 +62,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./dist/${{ steps.build_package.outputs.source }}
-          asset_name: ${{ steps.build_package.source }}
+          asset_name: ${{ steps.build_package.outputs.source }}
           asset_content_type: application/x-tar+gzip
