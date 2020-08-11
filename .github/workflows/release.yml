@@ -1,4 +1,4 @@
-# Match pre release beta tags on release branches.
+# Match release tags on master branch
 name: Release
 
 on:
@@ -11,9 +11,9 @@ on:
       - "[0-9]+.[0-9]+.[0-9].+[0-9]+"
 
 jobs:
-  pre-release:
+  release:
     runs-on: ubuntu-latest
-    name: Build pre-release package
+    name: Build release package
 
     steps:
       - uses: actions/checkout@v2
