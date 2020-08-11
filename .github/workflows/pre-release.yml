@@ -26,5 +26,40 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -U poetry
 
-      - name: Build package
-        run: poetry build
+      - name: Build Package
+        id: build-package
+        run: |
+          rm -rf dist
+          poetry build
+          echo "::set-output wheel=$(ls dist/*.whl)"
+          echo "::set-output source=$(ls dist/*.tar.gz)"
+      
+      - name: Create a Release
+        id: create-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Pre-release ${{ github.ref }}
+          prerelease: true
+    
+      - name: Upload Release Wheel
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/${{ steps.build-package.wheel }}
+          asset_name: ${{ steps.build-package.wheel }}
+          asset_content_type: application/x-pywheel+zip
+
+      - name: Upload Release Source
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/${{ steps.build-package.source }}
+          asset_name: ${{ steps.build-package.source }}
+          asset_content_type: application/x-tar+gzip
