@@ -4,7 +4,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "pyapp-elasticsearch"
-version = "0.1.0-beta.4"
+version = "0.1.0-beta.5"
 description = "pyApp extension for Elasticsearch"
 authors = ["Tim Savage <tim@savage.company>"]
 license = "BSD-3-Clause"
