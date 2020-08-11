@@ -5,7 +5,7 @@ build-backend = "poetry.masonry.api"
 [tool.poetry]
 name = "pyapp-elasticsearch"
 version = "0.1.1-alpha.0"
-description = "Elasticsearch Extension for pyApp"
+description = "pyApp extension for Elasticsearch"
 authors = ["Tim Savage <tim@savage.company>"]
 license = "BSD-3-Clause"
 packages = [
@@ -33,7 +33,9 @@ classifiers = [
 python = "^3.6"
 pyapp = ">=4.3.0"
 elasticsearch = "^7.8.0"
-aiohttp = { version= "^3.6.0", optional = true}
+
+# Async support
+aiohttp = { version = "^3.6.0", optional = true}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0"
