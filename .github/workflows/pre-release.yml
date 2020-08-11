@@ -31,8 +31,8 @@ jobs:
         run: |
           rm -rf dist
           poetry build
-          echo "::set-output source=$(ls dist/*.tar.gz)"
-          echo "::set-output wheel=$(ls dist/*.whl)"
+          echo "::set-output name=source::$(ls dist/*.tar.gz)"
+          echo "::set-output name=wheel::$(ls dist/*.whl)"
       
       - name: Create a Release
         id: create_release
